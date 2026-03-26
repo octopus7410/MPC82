@@ -1,0 +1,189 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        08/03/2010  11:19:58  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE KEY5B.obj TO CH5 RAMSIZE (256) CODE (0X0000-0XFFFF) XDATA (0X0000-0X03FF)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  KEY5B.obj (KEY5B)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  CH5 (KEY5B)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0008H     UNIT         ?DT?KEY5B
+            DATA    0010H     0004H     UNIT         ?DT?_DELAY_MS?KEY5B
+            DATA    0014H     0002H     UNIT         ?DT?INT0_INTERRUPT?KEY5B
+            IDATA   0016H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+                    0006H     07FAH                  *** GAP ***
+            CODE    0800H     008CH     UNIT         ?C_C51STARTUP
+            CODE    088CH     0082H     UNIT         ?PR?INT0_INTERRUPT?KEY5B
+            CODE    090EH     002DH     UNIT         ?PR?_DELAY_MS?KEY5B
+            CODE    093BH     0021H     UNIT         ?PR?MAIN?KEY5B
+            CODE    095CH     000BH     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   CH5 (KEY5B)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?INT0_INTERRUPT?KEY5B
+  +--> ?PR?_DELAY_MS?KEY5B
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?KEY5B
+  +--> ?C_INITSEG
+
+
+
+UNRESOLVED EXTERNAL SYMBOLS:
+   ERAL
+   EWEN
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/03/2010  11:19:58  PAGE 2
+
+
+
+
+
+SYMBOL TABLE OF MODULE:  CH5 (KEY5B)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        KEY5B
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0094H         PUBLIC        P0M1
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00C0H         PUBLIC        XICON
+  D:00B0H         PUBLIC        P3
+  D:00E8H         PUBLIC        P4
+  B:00A8H.7       PUBLIC        EA
+  B:0090H.5       PUBLIC        DI
+  D:00A8H         PUBLIC        IE
+  B:00A0H.0       PUBLIC        COL0
+  B:00A0H.1       PUBLIC        COL1
+  B:00A0H.2       PUBLIC        COL2
+  B:00A0H.3       PUBLIC        COL3
+  B:0090H.6       PUBLIC        DO
+  B:0090H.4       PUBLIC        CS
+  D:00B8H         PUBLIC        IP
+  B:0090H.7       PUBLIC        SK
+  D:00D8H         PUBLIC        CCON
+  C:093BH         PUBLIC        main
+  C:090EH         PUBLIC        _Delay_ms
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00A8H.0       PUBLIC        EX0
+  C:088CH         PUBLIC        INT0_Interrupt
+  D:0080H         PUBLIC        LED
+  D:00C8H         PUBLIC        T2CON
+  D:0008H         PUBLIC        Table
+  D:00A0H         PUBLIC        ROW
+  D:00D0H         PUBLIC        PSW
+  D:0093H         PUBLIC        P0M0
+  -------         PROC          _DELAY_MS
+  D:0010H         SYMBOL        dly
+  -------         DO            
+  D:0012H         SYMBOL        dly1
+  -------         ENDDO         
+  C:090EH         LINE#         550
+  C:0912H         LINE#         551
+  C:0912H         LINE#         553
+  C:0921H         LINE#         554
+  C:093AH         LINE#         555
+  -------         ENDPROC       _DELAY_MS
+  -------         PROC          MAIN
+  C:093BH         LINE#         8
+  C:093BH         LINE#         9
+  C:093BH         LINE#         10
+  C:0941H         LINE#         11
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/03/2010  11:19:58  PAGE 3
+
+
+  C:0945H         LINE#         12
+  C:0948H         LINE#         13
+  C:094BH         LINE#         15
+  C:0953H         LINE#         16
+  C:0956H         LINE#         17
+  C:0959H         LINE#         18
+  C:095BH         LINE#         19
+  -------         ENDPROC       MAIN
+  -------         PROC          INT0_INTERRUPT
+  -------         DO            
+  D:0014H         SYMBOL        key
+  D:0015H         SYMBOL        scan
+  -------         ENDDO         
+  C:088CH         LINE#         21
+  C:0899H         LINE#         23
+  C:089CH         LINE#         24
+  C:089FH         LINE#         25
+  C:089FH         LINE#         26
+  C:089FH         LINE#         27
+  C:08A2H         LINE#         28
+  C:08ACH         LINE#         29
+  C:08BAH         LINE#         30
+  C:08C0H         LINE#         31
+  C:08C2H         LINE#         32
+  C:08CAH         LINE#         33
+  C:08CCH         LINE#         34
+  C:08D4H         LINE#         35
+  C:08D6H         LINE#         36
+  C:08DEH         LINE#         37
+  C:08E0H         LINE#         38
+  C:08E8H         LINE#         40
+  C:08EFH         LINE#         41
+  C:08F9H         LINE#         42
+  C:0900H         LINE#         43
+  C:0903H         LINE#         44
+  -------         ENDPROC       INT0_INTERRUPT
+  -------         ENDMOD        KEY5B
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ERAL
+    MODULE:  KEY5B.obj (KEY5B)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  EWEN
+    MODULE:  KEY5B.obj (KEY5B)
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  EWEN
+    MODULE:  KEY5B.obj (KEY5B)
+    ADDRESS: 0954H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ERAL
+    MODULE:  KEY5B.obj (KEY5B)
+    ADDRESS: 0957H
+
+******************************************************************************
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/03/2010  11:19:58  PAGE 4
+
+
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00DDH BYTE (10%) *
+******************************************************************************
+
+Program Size: data=23.0 xdata=0 code=365
+LINK/LOCATE RUN COMPLETE.  4 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,98 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        11/05/2011  15:19:17  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE 3_1.obj TO ch3 RAMSIZE (256) CODE (0X0000-0XFFFF) XDATA (0X0000-0X03FF)
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  3_1.obj (3_1)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPADD)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  ch3 (3_1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000CH     UNIT         _DATA_GROUP_
+            IDATA   0014H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0142H     UNIT         ?C?LIB_CODE
+            CODE    0942H     0065H     INBLOCK      ?PR?MAIN?3_1
+            CODE    09A7H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   ch3 (3_1)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?3_1
+
+?PR?MAIN?3_1                   0008H    000CH
+
+
+
+SYMBOL TABLE OF MODULE:  ch3 (3_1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        3_1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0942H         PUBLIC        main
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        i
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/05/2011  15:19:17  PAGE 2
+
+
+  D:0009H         SYMBOL        j
+  D:000AH         SYMBOL        k
+  D:000CH         SYMBOL        l
+  D:0010H         SYMBOL        m
+  C:0966H         SYMBOL        loop
+  -------         ENDDO         
+  C:0942H         LINE#         4
+  C:0942H         LINE#         5
+  C:0942H         LINE#         6
+  C:0945H         LINE#         7
+  C:0948H         LINE#         8
+  C:094EH         LINE#         9
+  C:095AH         LINE#         10
+  C:0966H         LINE#         11
+  C:0966H         LINE#         12
+  C:0968H         LINE#         13
+  C:096AH         LINE#         14
+  C:0972H         LINE#         15
+  C:098AH         LINE#         16
+  C:09A4H         LINE#         17
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        3_1
+
+  -------         MODULE        ?C?FPADD
+  C:0807H         PUBLIC        ?C?FPADD
+  C:0803H         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0065H BYTE ( 4%) *
+******************************************************************************
+
+Program Size: data=21.0 xdata=0 code=438
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
